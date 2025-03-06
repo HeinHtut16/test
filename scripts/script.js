@@ -1,5 +1,5 @@
 const carouselImage = document.getElementById("carousel-image");
-const srcOil = "oil-";
+const srcOil = "Gift Card ";
 const dots = document.querySelectorAll(".dot");
 const carouselTitle = document.querySelector(".carousel-text-container h2");
 const carouselText = document.querySelector(".carousel-text-container p");
@@ -19,7 +19,7 @@ function prev() {
     if(image < 2) image = 5;
     image--;
     checkCarouselTitleAndText();
-    carouselImage.setAttribute("src", `images/${srcOil}${image}.webp`);
+    carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
     for(let i = 0; i < dots.length; i++)
     {
         if(dots[i].classList.contains("active"))
@@ -34,7 +34,7 @@ function next() {
     if(image > 3) image = 0;
     image++;
     checkCarouselTitleAndText();
-    carouselImage.setAttribute("src", `images/${srcOil}${image}.webp`);
+    carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
     for(let i = 0; i < dots.length; i++)
     {
         if(dots[i].classList.contains("active"))
@@ -71,7 +71,7 @@ document.addEventListener("click", (event) => {
             image = i + 1;
             checkCarouselTitleAndText();
             // resetAutoSlide();
-            carouselImage.setAttribute("src", `images/${srcOil}${image}.webp`);
+            carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
         }
     }
 });
