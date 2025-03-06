@@ -18,7 +18,7 @@ document.getElementById("next").addEventListener("click", () => {
 function prev() {
     if(image < 2) image = 5;
     image--;
-    checkCarouselTitleAndText();
+    // checkCarouselTitleAndText();
     carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
     for(let i = 0; i < dots.length; i++)
     {
@@ -33,7 +33,7 @@ function prev() {
 function next() {
     if(image > 3) image = 0;
     image++;
-    checkCarouselTitleAndText();
+    // checkCarouselTitleAndText();
     carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
     for(let i = 0; i < dots.length; i++)
     {
@@ -69,25 +69,25 @@ document.addEventListener("click", (event) => {
             }
             dots[i].classList.add("active");
             image = i + 1;
-            checkCarouselTitleAndText();
+            // checkCarouselTitleAndText();
             // resetAutoSlide();
             carouselImage.setAttribute("src", `images/${srcOil}${image}.jpg`);
         }
     }
 });
 
-function checkCarouselTitleAndText() {
-    if(image === 1) {
-        carouselTitle.textContent = "Petrol Engine Oil";
-        carouselText.textContent = "Lubricant for your car motor engines";
-    } else if (image === 2) {
-        carouselTitle.textContent = "Motorcycle Oil";
-        carouselText.textContent = "Lubricant for your motorcycle";
-    } else if (image === 3) {
-        carouselTitle.textContent = "Commercial Oil";
-        carouselText.textContent = "Lubricant for your commercial vehicles";
-    } else if (image === 4) {
-        carouselTitle.textContent = "Industrial Oil";
-        carouselText.textContent = "Lubricant for general industrial application";
-    }
-}
+// function checkCarouselTitleAndText() {
+//     if(image === 1) {
+//         carouselTitle.textContent = "Petrol Engine Oil";
+//         carouselText.textContent = "Lubricant for your car motor engines";
+//     } else if (image === 2) {
+//         carouselTitle.textContent = "Motorcycle Oil";
+//         carouselText.textContent = "Lubricant for your motorcycle";
+//     } else if (image === 3) {
+//         carouselTitle.textContent = "Commercial Oil";
+//         carouselText.textContent = "Lubricant for your commercial vehicles";
+//     } else if (image === 4) {
+//         carouselTitle.textContent = "Industrial Oil";
+//         carouselText.textContent = "Lubricant for general industrial application";
+//     }
+// }
