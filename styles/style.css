@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+.oil-video {
+    margin-top: 2rem;
+    width: 100%;
+    object-fit: cover;
+    height: 35rem;
+}
+
+.carousel-container {
+    position: relative;  
+    max-width: 146rem; 
+    margin: auto; 
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 146rem;
+    max-height: 30rem;
+}
+
+.carousel-text-container {
+    width: 100%;
+    max-width: 20rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.carousel-text-container h2 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.carousel-text-container p {
+    font-size: 1.7rem;
+}
+
+.prev, .next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    border-radius: 3px 0 0 3px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}  
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dots {
+    text-align: center;
+    margin-top: 2rem;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (min-width: 770px) {
+    .carousel-text-container {
+        max-width: 60rem;
+        gap: 4rem;
+    }
+    .carousel-text-container h2 {
+        font-size: 6rem;
+    }
+    .carousel-image {
+        max-height: 45rem;
+    }
+
+}
+
+@media (min-width: 1030px) {
+    .carousel-image {
+        max-height: 55rem;
+    }
+    .image-box-container {
+        margin: 0 auto;
+        padding: 2rem;
+        max-width: 150rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 50rem);
+        gap: 2rem;
+    }
+    .image-box {
+        height: 100%;
+    }
+}

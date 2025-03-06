@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Images</title>
+    <style>
+        .container {
+            width: 100rem;
+            height: 50rem;
+        }
+
+        .slider {
+            overflow: hidden;
+        }
+
+        .slider figure {
+            position: relative;
+            width: 500%;
+            margin: 0; 
+            left: 0;
+            animation: 20s slider infinite;
+        } 
+
+        .slider figure img {
+            height: 50rem;
+            width: 10%;
+            float: left;
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+            20% {
+                left: 0;
+            }
+            25% {
+                left: -50%;
+            }
+            45% {
+                left: -50%;
+            }
+            50% {
+                left: -100%;
+            }
+            70% {
+                left: -100%;
+            }
+            75% {
+                left: -300%;
+            }
+            95% {
+                left: -300%;
+            }
+            100% {
+                left: -400%;
+            }
+        }
+
+        /* @keyframes slider {
+            0% {
+                left: 0;
+            }
+            20% {
+                left: 0;
+            }
+            25% {
+                left: -100%;
+            }
+            45% {
+                left: -100%;
+            }
+            50% {
+                left: -200%;
+            }
+            70% {
+                left: -200%;
+            }
+            75% {
+                left: -300%;
+            }
+            95% {
+                left: -300%;
+            }
+            100% {
+                left: -400%;
+            }
+        } */    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider">
+            <figure>
+                <img src="images/oil-1.jpg" alt="Oil">
+                <img src="images/oil-2.jpg" alt="Oil">
+                <img src="images/oil-3.png" alt="Oil">
+                <img src="images/oil-4.jpg" alt="Oil">
+                <img src="images/oil-1.jpg" alt="Oil">
+            </figure>
+        </div>
+    </div>
+</body>
+</html>
