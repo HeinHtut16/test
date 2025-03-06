@@ -10,28 +10,6 @@ for (let i = 1; i <= 6; i++) {
     images[i].src = `../images/${srcGiftCard}${i}.jpg`;
 }
 
-document.addEventListener("click", (event) => {
-    for(let i = 0; i < smallImages.length; i++) {
-        if(event.target.matches(".small-image" + (i+1))) {
-            bigImage.setAttribute("src", `../images/${srcGiftCard}${i+1}.jpg`);
-        }
-    }
-});
-
-document.addEventListener("click", (event) => {
-    for(let i = 0; i < denominations.length; i++) {
-        if(event.target.matches(".denomination" + (i+1))) {
-            for(let i = 0; i < denominations.length; i++) {
-                if(denominations[i].classList.contains("active")) {
-                    denominations[i].classList.remove("active");
-                }
-            }
-            denominations[i].classList.add("active");
-            price.textContent = denominations[i].textContent;
-        }
-    }
-});
-
 document.getElementById("prev").addEventListener("click", () => {
     if(image < 2) image = 7;
     bigImage.setAttribute("src", `../images/${srcGiftCard}${image-1}.jpg`);
